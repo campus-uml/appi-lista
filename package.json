@@ -1,5 +1,5 @@
 {
-  "name": "api-notas-todo",
+  "name": "gestion_de_entradas_de_blog",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",

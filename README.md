@@ -1,88 +1,57 @@
-# PROYECTO DE API PARA EL MANEJO DE UNA BASE DE DATOS DE GESTION DE TAREAS (TODO LIST)
-
-## Descripción
-
-Este proyecto consiste en la creación de una API que permita el manejo de una base de datos de gestión de tareas (TODO List). La API permitirá la creación, modificación, eliminación y consulta de tareas. 
-
-## Tecnologías
-
-- Node.js para conectar con la base de datos
-- Express con TypeScript como servidor web
-- MySQL / MariaDB (usando la libreía mysql2) como base de datos
-
-## Base de datos
-
-La base de datos ya la tiene creada en MySQL, se llama `tareas` y tiene una tabla llamada `tareas` con los siguientes campos:
-
-- id (int, autoincremental, primary key)
-- titulo (varchar)
-- completado (boolean)
-
-## Crear un repositorio partiendo de este (plantilla)
-
-Para crear un repositorio a partir de este, se debe hacer clic en el botón "Use this template" que se encuentra en la parte superior de la página del repositorio.
-
-## Clonar el repositorio desde la terminal usando el repositorio creado a partir de la plantilla
-
-Para clonar el repositorio desde la terminal, se debe ejecutar el siguiente comando:
-
-```bash 
+# PROYECTO DE API PARA EL MANEJO DE UNA BASE DE DATOS DE ENTRADAS DE BLOG
+Descripción
+Este proyecto consiste en la creación de una API que permita el manejo de una base de datos de entradas de blog. La API facilita la creación, modificación, eliminación y consulta de entradas.
+# Tecnologías Utilizadas
+•	Node.js: Utilizado para la conexión con la base de datos.
+•	Express: Servidor web implementado en JavaScript.
+•	MySQL / MariaDB: Base de datos gestionada mediante la librería mysql2.
+# Base de Datos
+La base de datos, denominada blogs, incluye una tabla articulos con la siguiente estructura:
+•	id: INT, autoincremental, clave primaria.
+•	titulo: VARCHAR, título del artículo.
+•	contenido: TEXT, cuerpo del artículo.
+•	fecha: DATE, fecha de publicación.
+•	autor: VARCHAR, nombre del autor.
+# Repositorio
+Creación de un Repositorio a Partir de una Plantilla
+Para iniciar un nuevo proyecto a partir de esta plantilla, haz clic en "Use this template" en la parte superior de la página del repositorio.
+Clonación del Repositorio
+Para clonar el repositorio usando la terminal, ejecuta el siguiente comando:
+bash
+Copy code
 git clone <url del repositorio>
-```
-
-## Instalación
-
-Para instalar las dependencias del proyecto, se debe ejecutar el siguiente comando:
-
-```bash
+# Instalación
+Instala las dependencias del proyecto ejecutando:
+bash
+Copy code
 npm install
-```
-
-## Ajustes en el archivo .env
-
-Se debe actualizar el archivo llamado `.env` en la raíz del proyecto con las siguientes variables de entorno:
-
-```bash
+# Configuración del Archivo .env
+Actualiza el archivo .env en la raíz del proyecto con las siguientes variables de entorno:
+env
+Copy code
 DB_HOST=localhost
-DB_USER=AÑADIR_LA_CONTRASEÑA_DE_MARIADB_ACÁ
-DB_PASSWORD=AÑADIR_LA_CONTRASEÑA_DE_MARIADB_ACÁ
-DB_NAME=tareas o el nombre de la base de datos que tenga configurado en su base de datos
-DB_PORT=3306 o el puerto que tenga configurado en su base de datos
-```
-
-
-## Ejecución
-
-Para ejecutar el proyecto, se debe ejecutar el siguiente comando:
-
-```bash
+DB_USER=root
+DB_PASSWORD=<AÑADIR_LA_CONTRASEÑA_DE_MARIADB_ACÁ>
+DB_NAME=blogs
+DB_PORT=3306  # o el puerto configurado en su base de datos
+Ejecución del Proyecto
+Para ejecutar el proyecto, utiliza el comando:
+bash
+Copy code
 npm run dev
-```
+# Documentación de la API
+La documentación de la API se proporciona en el archivo API-TO-DO.json.
+Importar Collection de Postman
+Para importar la collection de Postman, sigue estos pasos:
+1.	Abre Postman.
+2.	Haz clic en "Import".
+3.	Selecciona el archivo desde la carpeta del repositorio.
+# Endpoints de la API
+•	GET /articulos: Devuelve todas las entradas de blog.
+•	GET /articulos/:id: Devuelve una entrada de blog específica por su ID.
+•	POST /articulos: Crea una nueva entrada de blog.
+•	PUT /articulos/:id: Actualiza una entrada de blog existente por su ID.
+•	DELETE /articulos/:id: Elimina una entrada de blog por su ID.
+# Autor
+Nombre: Edith Elizabeth Hernández Lanzas
 
-## Documentación de la API (Postman collection)
-
-La documentación de la API se encuentra en el siguiente archivo de Postman:
-
-```bash
-API-TO-DO.json
-```
-
-## Importar la collection de Postman
-
-Para importar la collection de Postman, se debe seguir los siguientes pasos:
-
-1. Abrir Postman.
-2. Hacer clic en el botón "Import" que se encuentra en la parte superior izquierda.
-3. Seleccionar el archivo desde la carpeta del reposiorio.
-
-## Endpoints para la API (/tareas)
-
-- GET /tareas: Obtiene todas las tareas.
-- GET /tareas/:id: Obtiene una tarea por su id.
-- POST /tareas: Crea una nueva tarea.
-- PUT /tareas/:id: Actualiza una tarea por su id.
-- DELETE /tareas/:id: Elimina una tarea por su id.
-
-## Autor
-
-- Nombre: Carlos Andres Perez Ubeda
